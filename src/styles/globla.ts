@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   
   :root {
     --background: #f0f2f5;
