@@ -56,4 +56,42 @@ export const GlobalStyles = createGlobalStyle`
     cursor: not-allowed;
   }
 
+  .new-modal-transition-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .new-modal-transition{
+    width: 100%;
+    max-width: 575px;
+    padding:3rem;
+    position: relative;
+    background:var(--background);
+    border-radius: 0.25rem;
+  }
+
+  .button-close-modal{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: transparent;
+    border: 0;
+    transition: filter 0.2s ;
+
+    &:hover {
+      filter: brightness(0.5);
+      img {
+        width: 110%;
+      }
+    }
+  }
+
 `;
