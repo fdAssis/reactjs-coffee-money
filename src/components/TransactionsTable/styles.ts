@@ -20,6 +20,7 @@ export const Container = styled.div`
       background: var(--shape);
       padding: 1rem 2rem;
       text-align: left;
+      border-radius: 0.25rem;
       color: var(--text-body);
 
       &:first-child{
