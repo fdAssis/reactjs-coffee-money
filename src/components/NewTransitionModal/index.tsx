@@ -1,11 +1,11 @@
-import { FormEvent, useState, useContext} from 'react';
+import { FormEvent, useState} from 'react';
 import Modal from 'react-modal';
 import { Container, TransitionTypeContainer, ButtonBox } from './styles';
 
 import ImgClose from '../../assets/close.svg';
 import ImgIncome from '../../assets/income.svg';
 import ImgOutcome from '../../assets/outcome.svg';
-import { TransactionContext } from '../../TransactionsContext';
+import { useTransaction } from '../../hooks/useTransactions';
 
 
 interface NewTransitionModalProps{
@@ -20,7 +20,7 @@ export function NewTransitionModal({isOpen,  onRequestClose}:NewTransitionModalP
   const [value, setValue] = useState(0);
   const [category, setCategory] = useState('');
 
-  const {createTransaction} = useContext(TransactionContext);
+  const {createTransaction} = useTransaction();
 
   async function handleNewTransition(event:FormEvent){
     event.preventDefault();
